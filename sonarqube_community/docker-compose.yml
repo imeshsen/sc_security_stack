@@ -7,8 +7,6 @@ services:
     container_name: sonarqube_community
     volumes:
       - sonarqube_data:/opt/sonarqube/data
-      - sonarqube_extensions:/opt/sonarqube/extensions
-      - ./esql-plugin-3.3.0.jar:/opt/sonarqube/extensions/plugins/esql-plugin-3.3.0.jar:ro
       - sonarqube_logs:/opt/sonarqube/logs
     ports:
       - "9000:9000"
@@ -42,7 +40,6 @@ services:
 
 volumes:
   sonarqube_data:
-  sonarqube_extensions:
   sonarqube_logs:
   sonarqube_db_data:
 
